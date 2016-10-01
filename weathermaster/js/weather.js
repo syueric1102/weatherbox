@@ -24,7 +24,7 @@ function loadWeather(location, woeid){
             city = weather.city;
             temp = weather.temp + '&deg;';
             wcode = '<img class="weathericon" src="weathermaster/images/weathericons/'+weather.code+'.svg">';
-            if (weather.code == 36){
+            if (weather.code == 36 || weather.code == 32){
                 var request = new XMLHttpRequest();
                 request.open( "GET" , "gpiotestone.php", true);
                 request.send(null);
