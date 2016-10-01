@@ -25,10 +25,14 @@ function loadWeather(location, woeid){
             temp = weather.temp + '&deg;';
             wcode = '<img class="weathericon" src="weathermaster/images/weathericons/'+weather.code+'.svg">';
             if (wcode == 26){
-                var request = $.getJSON("gpiotestone.php");
+                var request = new XMLHttpRequest();
+                request.open( "GET" , "gpiotestone.php", true);
+                request.send(null);
             }
             else{
-                var request = $.getJSON("gpiotesttwo.php");
+                var request = new XMLHttpRequest();
+                request.open( "GET" , "gpiotesttwo.php", true);
+                 request.send(null); 
             }
             wind = '<p>'+weather.wind.speed+'</p><p>'+weather.units.speed+'</p>';
             humidity = weather.humidity+' %';
