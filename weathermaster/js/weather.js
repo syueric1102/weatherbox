@@ -23,16 +23,12 @@ function loadWeather(location, woeid){
         success: function(weather){
             city = weather.city;
             temp = weather.temp + '&deg;';
-            wcode = '<img class="weathericon" src="images/weathericons/'+weather.code+'.svg">';
-            if (wcode == 32){
-                var request = new XMLHttpRequest();
-                request.open( "GET" , "gpiotestone.php", true);
-                request.send(null);
+            wcode = '<img class="weathericon" src="weathermaster/images/weathericons/'+weather.code+'.svg">';
+            if (wcode == 26){
+                var request = $.getJSON("gpiotestone.php");
             }
             else{
-                var request = new XMLHttpRequest();
-                request.open( "GET" , "gpiotesttwo.php", true);
-                request.send(null);
+                var request = $.getJSON("gpiotesttwo.php");
             }
             wind = '<p>'+weather.wind.speed+'</p><p>'+weather.units.speed+'</p>';
             humidity = weather.humidity+' %';
