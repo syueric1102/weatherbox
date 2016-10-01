@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--TheFreeElectron 2015, http://www.instructables.com/member/TheFreeElectron/ -->
 
 <html>

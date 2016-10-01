@@ -1,6 +1,7 @@
 var place = prompt ("Please enter your location");
 
-
+loadWeather(place, "");
+/*
 if ( "geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function (position) {
         loadWeather(place,"");
@@ -9,7 +10,7 @@ if ( "geolocation" in navigator) {
 } else{
     loadWeather('Mumbai',"");
 }
-
+*/
 $(document).ready(function(){
     setInterval(getWeather,10000);
 });
@@ -23,6 +24,16 @@ function loadWeather(location, woeid){
             city = weather.city;
             temp = weather.temp + '&deg;';
             wcode = '<img class="weathericon" src="images/weathericons/'+weather.code+'.svg">';
+            if (wcode == 32){
+                var request = new XMLHttpRequest();
+                request.open( "GET" , "gpiotestone.php", true);
+                request.send(null);
+            }
+            else{
+                var request = new XMLHttpRequest();
+                request.open( "GET" , "gpiotesttwo.php", true);
+                request.send(null);
+            }
             wind = '<p>'+weather.wind.speed+'</p><p>'+weather.units.speed+'</p>';
             humidity = weather.humidity+' %';
             $(".location").text(city);
