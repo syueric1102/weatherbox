@@ -289,8 +289,16 @@ function enter(){
         }
     </script>
     <script>
-        function get(num){
-            document.getElementById('iterateEffects').innerHTML =date_arr[num];
+          function get(num){    
+          var w = date_arr[num];
+          if(w==13 || w==19 || w==21 || w==21 || w ==32){
+            var request = new XMLHttpRequest();
+            request.open( "GET" , "sunny.php", true);
+            request.send(null);
+            }
+          else if(){
+
+          }
         }
     </script>
 
