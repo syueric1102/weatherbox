@@ -1,29 +1,260 @@
-﻿<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <title>Weather App</title>
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700,inherit,400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="weathermaster/css/standardize.css">
-  <link rel="stylesheet" href="weathermaster/css/index.css">
-</head>
-<body class="body page-index clearfix">
-  <div class="container clearfix">
-    <p class="location"></p>
-    <p class="temperature"></p>
-    <div class="climate_bg"></div>
-    <div class="info_bg">
-      <img class="dropicon" src="weathermaster/images/Droplet.svg">
-      <p class="humidity"></p>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Stratus</title>
+		<meta name="description" content="A Collection of Page Transitions with CSS Animations" />
+		<meta name="keywords" content="page transition, css animation, website, effect, css3, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/multilevelmenu.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>	
+		<div class="pt-triggers">
+			<button id="iterateEffects" style=";" class = "toggle_buttons2" onclick="butt()"
+            >Go to Demo</button>
+		</div><!-- /triggers -->
 
-      <img class="windicon" src="weathermaster/images/Wind.svg">
-      <div class="windspeed"></div>
+		<div id="pt-main" class="pt-perspective">
+			<div class="pt-page pt-page-1"><h1>Stratus</h1>
+             
+
+
+
+
+            <div class = "Submit">
+  <form>
+    <label for="fname">Enter location</label>
+    <input id="Location_bar" type="text" id="fname" name="firstname">
+
+      
+    <input type="button" value="Submit" id="subby">
+    
+  </form>
+</div> 
+            
+            
+            
+    <div class="container clearfix" id="Page1"style="overflow:hidden;
+    display:none;">
+        <div class="fore"style="float: left" onclick="get(0)">
+        <div class ="icon_test" id="icon1"></div>
+        <p class="date" id="date1"></p>
+        <p class="location"></p>
+        <p class="temperature" id="temp1"></p>
+        </div>
+        
+        <div class="fore_in"style="float: left" onclick="get(1)">
+        <div class ="icon_test" id= "icon2"></div>
+        <p class="date" id ="date2"></p>
+        <p class="location"></p>
+        <p class="temperature" id="temp2"></p>
+        </div>
+
+        <div class="fore_in"style="float: left" onclick="get(2)">
+        <div class ="icon_test" id="icon3"></div>
+        <p class="date" id = "date3"></p>
+        <p class="location"></p>
+        <p class="temperature" id="temp3"></p>
+        </div>
+
+
+        <div class="fore_edge"style="float: left" onclick="get(3)">
+            <div class ="icon_test"id="icon4"></div>
+        <p class="date" id="date4"></p>
+        <p class="location"></p>
+            <p class="temperature"id="temp4"></p>
+        </div>
+
+
     </div>
-  </div>
+
+    <div class="container2 clearfix" id="lv2"style="overflow:hidden;
+    display:none;">
+        <div class="fore2" onclick="get(4)" style="float: left">
+        
+        
+        <div class ="icon_test" id="icon5" ></div>
+        <p class="date"id="date5"></p>
+        <p class="location"></p>
+            <p class="temperature"id="temp5"></p>
+        </div>
+
+
+
+        <div class="fore_in"style="float: left" onclick="get(5)">
+            <div class ="icon_test"id="icon6"></div>
+        <p class="date" id="date6"></p>
+        <p class="location"></p>
+            <p class="temperature"id="temp6"></p>
+        </div>
+
+
+        <div class="fore_edge"style="float: left" id="cast7" onclick="get(6)">
+            <div class ="icon_test"id="icon7"></div>
+            <p class="date" id="date7">d</p>
+            <p class="location"></p>
+            <p class="temperature" id="temp7"></p>
+        </div>
+
+
+
+        </div>
+
+    </div>
+
+                        
+            
+            
+            
+            
+            
+			<div class="pt-page pt-page-2"><h1>Demo</h1>
+                <div >
+                <div style="text-align:center; margin-top:30%;">
+                <button id="f" class="toggle_buttons" onclick
+                =""
+     style="background-color:#ff9900">
+      <img src="./images/weathericons/36.svg" style="height:120%; width:120%;
+    margin-top:-5.5%; margin-left:-10%;" >
+    </img>
+     </button>
+     <button id="Page2" class="toggle_buttons" onclick =""
+     style="background-color:green">
+      <img src="./images/weathericons/10.svg" style="height:120%; width:120%;
+    margin-top:-5.5%; margin-left:-10%;" >
+    </img>
+     </button>
+     <button class="toggle_buttons" onclick ="lightning()"
+     style="background-color:red">
+      <img src="./images/weathericons/3.svg" style="height:120%; width:120%;
+    margin-top:-5.5%; margin-left:-10%;" >
+    </img>
+     </button>
+     <button class="toggle_buttons" onclick =""
+     style="background-color:blue">
+      <img src="./images/weathericons/26.svg" style="height:120%; width:120%;
+    margin-top:-5.5%; margin-left:-10%;" >
+    </img>
+     </button>
+     </div>
+
+                </div>
+			</div>
+		</div>
+
+		<div class="pt-message">
+			<p>Your browser does not support CSS animations.</p>
+		</div>
+<!--
+ <div class="container clearfix" id="Page1">
+    <p class="date"></p>
+-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.dlmenu.js"></script>
+		<script src="js/pagetransitions.js"></script>
+        <script>
+function next(kappa) {
+  document.getElementById("iterateEffects")
+  if(document.getElementById("iterateEffects").style.value !='a'){
+    document.getElementById("iterateEffects").value = "a";
+  } else{
+     
+
+  }
+  document.getElementById("iterateEffects").value = "a";
+  document.getElementById("iterateEffects").style.text = "a";
+   document.getElementById("iterateEffects").text = "a";
+    document.getElementById("iterateEffects").style.text("a");
+     document.getElementById("iterateEffects").text("sdf");
+     document.getElementById("iterateEffects").style.display='none';
+
+
+
+  return false;
+}
+</script>
+<script>
+function butt(){
+   if(document.getElementById('iterateEffects').innerHTML=='Go to Demo'){
+    document.getElementById('iterateEffects').innerHTML='Go to Forecast';
+   }
+   else{
+    document.getElementById('iterateEffects').innerHTML='Go to Demo';
+
+   }
+}
+</script>
+<script>
+function lightning(){
+  var request = new XMLHttpRequest();
+  request.open( "GET" , "lightning.php", true);
+  request.send(null);
+}
+</script>
+<script>
+function butt2(){
+   document.getElementById('temp1').innerHTML=("asdf");
+   if(document.getElementById('iterateEffects').innerHTML!='Kappa'){
+    document.getElementById('iterateEffects').innerHTML=
+    "sim";
+   }
+   else{
+    document.getElementById('iterateEffects').innerHTML='Kappa';
+
+   }
+   document.getElementById('temp1').innerHTML=("asdf");
+
+}
+</script>
+
+<script src= "./js/weather.js">
+function enter(){
+    /* 
+    document.getElementById('iterateEffects').innerHTML=
+    document.getElementById('Location_bar').innerHTML;
+    */
+        var hello=document.getElementById('Location_bar').value;
+        /*document.getElementById('iterateEffects').innerHTML = hello;*/
+        lel();
+}
+
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
-<script src="weathermaster/js/weather.js"></script>
+<script src="js/weather.js"></script>
+<script type="text/javascript" src="js/weather.js"></script>
 
-</body>
+<script>
+
+    $(function() {
+    $("form").submit(function() { return false; });
+});
+    document.getElementById("Location_bar").addEventListener("keyup",function(event){
+        event.preventDefault();
+        if(event.keyCode ==13){
+           document.getElementById("subby").click();
+        }
+    });
+    </script>
+    <script>
+        function div_click(){
+            prompt("sup");
+        }
+    </script>
+    <script>
+        function get(num){
+            document.getElementById('iterateEffects').innerHTML =date_arr[num];
+        }
+    </script>
+
+	</body>
 </html>
