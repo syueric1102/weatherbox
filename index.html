@@ -119,13 +119,13 @@
                 <div >
                 <div style="text-align:center; margin-top:30%;">
                 <button id="f" class="toggle_buttons" onclick
-                =""
+                ="sunny()"
      style="background-color:#ff9900">
       <img src="./images/weathericons/36.svg" style="height:120%; width:120%;
     margin-top:-5.5%; margin-left:-10%;" >
     </img>
      </button>
-     <button id="Page2" class="toggle_buttons" onclick =""
+     <button id="Page2" class="toggle_buttons" onclick ="rainycloudy()"
      style="background-color:green">
       <img src="./images/weathericons/10.svg" style="height:120%; width:120%;
     margin-top:-5.5%; margin-left:-10%;" >
@@ -137,7 +137,7 @@
     margin-top:-5.5%; margin-left:-10%;" >
     </img>
      </button>
-     <button class="toggle_buttons" onclick =""
+     <button class="toggle_buttons" onclick ="cloudy()"
      style="background-color:blue">
       <img src="./images/weathericons/26.svg" style="height:120%; width:120%;
     margin-top:-5.5%; margin-left:-10%;" >
@@ -192,14 +192,51 @@ function butt(){
    }
 }
 </script>
+
+<!--php scripts-->
 <script>
 function lightning(){
-  document.getElementById('temp1').innerHTML=("asdf");
   var request = new XMLHttpRequest();
   request.open( "GET" , "lightning.php", true);
   request.send(null);
 }
 </script>
+<script>
+function sunny(){
+  var request = new XMLHttpRequest();
+  request.open( "GET" , "sunny.php", true);
+  request.send(null);
+}
+</script>
+<script>
+function sunnycloudy(){
+  var request = new XMLHttpRequest();
+  request.open( "GET" , "sunnycloudy.php", true);
+  request.send(null);
+}
+</script>
+<script>
+function rainy(){
+  var request = new XMLHttpRequest();
+  request.open( "GET" , "rainy.php", true);
+  request.send(null);
+}
+</script>
+<script>
+function rainycloudy(){
+  var request = new XMLHttpRequest();
+  request.open( "GET" , "rainycloudy.php", true);
+  request.send(null);
+}
+</script>
+<script>
+function cloudy(){
+  var request = new XMLHttpRequest();
+  request.open( "GET" , "cloudy.php", true);
+  request.send(null);
+}
+</script>
+
 <script>
 function butt2(){
    document.getElementById('temp1').innerHTML=("asdf");
